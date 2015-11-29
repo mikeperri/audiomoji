@@ -7,14 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52220E2B1C09009A00555350 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 52220E291C09009A00555350 /* 37x-Checkmark.png */; };
+		52220E2C1C09009A00555350 /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52220E2A1C09009A00555350 /* 37x-Checkmark@2x.png */; };
+		52220E3A1C0B9D3200555350 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52220E391C0B9D3200555350 /* KeyboardViewController.swift */; };
+		52220E3E1C0B9D3200555350 /* CustomKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52220E371C0B9D3200555350 /* CustomKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		525888491C08FBC000C89BC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525888481C08FBC000C89BC9 /* AppDelegate.swift */; };
 		5258884B1C08FBC000C89BC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258884A1C08FBC000C89BC9 /* ViewController.swift */; };
 		5258884E1C08FBC000C89BC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5258884C1C08FBC000C89BC9 /* Main.storyboard */; };
 		525888501C08FBC000C89BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5258884F1C08FBC000C89BC9 /* Assets.xcassets */; };
 		525888531C08FBC000C89BC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525888511C08FBC000C89BC9 /* LaunchScreen.storyboard */; };
+		52A055261C08FCEB0054F327 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A055221C08FCEB0054F327 /* Emoji.swift */; };
+		52A055271C08FCEB0054F327 /* Emojis.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52A055231C08FCEB0054F327 /* Emojis.plist */; };
+		52A055281C08FCEB0054F327 /* EmojiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A055241C08FCEB0054F327 /* EmojiTableViewCell.swift */; };
+		52A055291C08FCEB0054F327 /* EmojiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A055251C08FCEB0054F327 /* EmojiTableViewController.swift */; };
+		A87732C7AB30075DE777E06C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DA732EBB53335DB8131C2B /* libPods.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		52220E3C1C0B9D3200555350 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5258883D1C08FBC000C89BC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52220E361C0B9D3200555350;
+			remoteInfo = CustomKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		52220E421C0B9D3200555350 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				52220E3E1C0B9D3200555350 /* CustomKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		52220E281C08FDB100555350 /* Trillmoji-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Trillmoji-Bridging-Header.h"; sourceTree = "<group>"; };
+		52220E291C09009A00555350 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
+		52220E2A1C09009A00555350 /* 37x-Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark@2x.png"; sourceTree = "<group>"; };
+		52220E371C0B9D3200555350 /* CustomKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CustomKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		52220E391C0B9D3200555350 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		52220E3B1C0B9D3200555350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		525888451C08FBC000C89BC9 /* Trillmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trillmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		525888481C08FBC000C89BC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5258884A1C08FBC000C89BC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,24 +61,60 @@
 		5258884F1C08FBC000C89BC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		525888521C08FBC000C89BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		525888541C08FBC000C89BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52A055221C08FCEB0054F327 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
+		52A055231C08FCEB0054F327 /* Emojis.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Emojis.plist; sourceTree = "<group>"; };
+		52A055241C08FCEB0054F327 /* EmojiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiTableViewCell.swift; sourceTree = "<group>"; };
+		52A055251C08FCEB0054F327 /* EmojiTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiTableViewController.swift; sourceTree = "<group>"; };
+		B1DA732EBB53335DB8131C2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFBC664B3A0D3C04F95D47ED /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FC62F72EBED1C03AD93959BF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		525888421C08FBC000C89BC9 /* Frameworks */ = {
+		52220E341C0B9D3200555350 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		525888421C08FBC000C89BC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A87732C7AB30075DE777E06C /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		299D9A27DAE2332D93E8D84E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC62F72EBED1C03AD93959BF /* Pods.debug.xcconfig */,
+				DFBC664B3A0D3C04F95D47ED /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		52220E381C0B9D3200555350 /* CustomKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				52220E391C0B9D3200555350 /* KeyboardViewController.swift */,
+				52220E3B1C0B9D3200555350 /* Info.plist */,
+			);
+			path = CustomKeyboard;
+			sourceTree = "<group>";
+		};
 		5258883C1C08FBC000C89BC9 = {
 			isa = PBXGroup;
 			children = (
 				525888471C08FBC000C89BC9 /* Trillmoji */,
+				52220E381C0B9D3200555350 /* CustomKeyboard */,
 				525888461C08FBC000C89BC9 /* Products */,
+				299D9A27DAE2332D93E8D84E /* Pods */,
+				E98012E3EC9D4FA9F67A448C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				525888451C08FBC000C89BC9 /* Trillmoji.app */,
+				52220E371C0B9D3200555350 /* CustomKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,28 +132,65 @@
 			children = (
 				525888481C08FBC000C89BC9 /* AppDelegate.swift */,
 				5258884A1C08FBC000C89BC9 /* ViewController.swift */,
+				52A055221C08FCEB0054F327 /* Emoji.swift */,
+				52A055231C08FCEB0054F327 /* Emojis.plist */,
+				52A055241C08FCEB0054F327 /* EmojiTableViewCell.swift */,
+				52A055251C08FCEB0054F327 /* EmojiTableViewController.swift */,
+				52220E291C09009A00555350 /* 37x-Checkmark.png */,
+				52220E2A1C09009A00555350 /* 37x-Checkmark@2x.png */,
 				5258884C1C08FBC000C89BC9 /* Main.storyboard */,
 				5258884F1C08FBC000C89BC9 /* Assets.xcassets */,
 				525888511C08FBC000C89BC9 /* LaunchScreen.storyboard */,
 				525888541C08FBC000C89BC9 /* Info.plist */,
+				52220E281C08FDB100555350 /* Trillmoji-Bridging-Header.h */,
 			);
 			path = Trillmoji;
+			sourceTree = "<group>";
+		};
+		E98012E3EC9D4FA9F67A448C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1DA732EBB53335DB8131C2B /* libPods.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		525888441C08FBC000C89BC9 /* Trillmoji */ = {
+		52220E361C0B9D3200555350 /* CustomKeyboard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 525888571C08FBC000C89BC9 /* Build configuration list for PBXNativeTarget "Trillmoji" */;
+			buildConfigurationList = 52220E3F1C0B9D3200555350 /* Build configuration list for PBXNativeTarget "CustomKeyboard" */;
 			buildPhases = (
-				525888411C08FBC000C89BC9 /* Sources */,
-				525888421C08FBC000C89BC9 /* Frameworks */,
-				525888431C08FBC000C89BC9 /* Resources */,
+				52220E331C0B9D3200555350 /* Sources */,
+				52220E341C0B9D3200555350 /* Frameworks */,
+				52220E351C0B9D3200555350 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			name = CustomKeyboard;
+			productName = CustomKeyboard;
+			productReference = 52220E371C0B9D3200555350 /* CustomKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		525888441C08FBC000C89BC9 /* Trillmoji */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 525888571C08FBC000C89BC9 /* Build configuration list for PBXNativeTarget "Trillmoji" */;
+			buildPhases = (
+				45FF086C17B297D439824CB2 /* Check Pods Manifest.lock */,
+				525888411C08FBC000C89BC9 /* Sources */,
+				525888421C08FBC000C89BC9 /* Frameworks */,
+				525888431C08FBC000C89BC9 /* Resources */,
+				ADF126B6D3BE2DD7239FE011 /* Embed Pods Frameworks */,
+				0496CE17DED1D7FB4D0ACA4B /* Copy Pods Resources */,
+				52220E421C0B9D3200555350 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52220E3D1C0B9D3200555350 /* PBXTargetDependency */,
 			);
 			name = Trillmoji;
 			productName = Trillmoji;
@@ -94,8 +207,13 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Michael Perri";
 				TargetAttributes = {
+					52220E361C0B9D3200555350 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = E92EJTVEYS;
+					};
 					525888441C08FBC000C89BC9 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = E92EJTVEYS;
 					};
 				};
 			};
@@ -113,34 +231,112 @@
 			projectRoot = "";
 			targets = (
 				525888441C08FBC000C89BC9 /* Trillmoji */,
+				52220E361C0B9D3200555350 /* CustomKeyboard */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		52220E351C0B9D3200555350 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		525888431C08FBC000C89BC9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				525888531C08FBC000C89BC9 /* LaunchScreen.storyboard in Resources */,
+				52A055271C08FCEB0054F327 /* Emojis.plist in Resources */,
 				525888501C08FBC000C89BC9 /* Assets.xcassets in Resources */,
 				5258884E1C08FBC000C89BC9 /* Main.storyboard in Resources */,
+				52220E2B1C09009A00555350 /* 37x-Checkmark.png in Resources */,
+				52220E2C1C09009A00555350 /* 37x-Checkmark@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0496CE17DED1D7FB4D0ACA4B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45FF086C17B297D439824CB2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ADF126B6D3BE2DD7239FE011 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		52220E331C0B9D3200555350 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52220E3A1C0B9D3200555350 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		525888411C08FBC000C89BC9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A055261C08FCEB0054F327 /* Emoji.swift in Sources */,
 				5258884B1C08FBC000C89BC9 /* ViewController.swift in Sources */,
+				52A055281C08FCEB0054F327 /* EmojiTableViewCell.swift in Sources */,
 				525888491C08FBC000C89BC9 /* AppDelegate.swift in Sources */,
+				52A055291C08FCEB0054F327 /* EmojiTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52220E3D1C0B9D3200555350 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52220E361C0B9D3200555350 /* CustomKeyboard */;
+			targetProxy = 52220E3C1C0B9D3200555350 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5258884C1C08FBC000C89BC9 /* Main.storyboard */ = {
@@ -162,6 +358,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		52220E401C0B9D3200555350 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = CustomKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mjp.Trillmoji.CustomKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		52220E411C0B9D3200555350 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = CustomKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mjp.Trillmoji.CustomKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		525888551C08FBC000C89BC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -247,29 +469,49 @@
 		};
 		525888581C08FBC000C89BC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC62F72EBED1C03AD93959BF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Trillmoji/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mjp.Trillmoji;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Trillmoji/Trillmoji-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		525888591C08FBC000C89BC9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFBC664B3A0D3C04F95D47ED /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Trillmoji/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mjp.Trillmoji;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Trillmoji/Trillmoji-Bridging-Header.h";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		52220E3F1C0B9D3200555350 /* Build configuration list for PBXNativeTarget "CustomKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52220E401C0B9D3200555350 /* Debug */,
+				52220E411C0B9D3200555350 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		525888401C08FBC000C89BC9 /* Build configuration list for PBXProject "Trillmoji" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -286,6 +528,7 @@
 				525888591C08FBC000C89BC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

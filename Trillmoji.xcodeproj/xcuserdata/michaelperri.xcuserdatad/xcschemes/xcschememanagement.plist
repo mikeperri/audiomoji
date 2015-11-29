@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CustomKeyboard.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>Trillmoji.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>52220E361C0B9D3200555350</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>525888441C08FBC000C89BC9</key>
 		<dict>
 			<key>primary</key>
