@@ -16,6 +16,15 @@
 		5258884E1C08FBC000C89BC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5258884C1C08FBC000C89BC9 /* Main.storyboard */; };
 		525888501C08FBC000C89BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5258884F1C08FBC000C89BC9 /* Assets.xcassets */; };
 		525888531C08FBC000C89BC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525888511C08FBC000C89BC9 /* LaunchScreen.storyboard */; };
+		525CB9671C12AE5F00585BB6 /* KeyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CB9661C12AE5F00585BB6 /* KeyCollectionViewCell.swift */; };
+		525CB9691C12BDC500585BB6 /* KeyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CB9681C12BDC500585BB6 /* KeyData.swift */; };
+		525CB96D1C12C42700585BB6 /* huh.amr in Resources */ = {isa = PBXBuildFile; fileRef = 525CB96A1C12C42700585BB6 /* huh.amr */; };
+		525CB96E1C12C42700585BB6 /* maybachmusic.amr in Resources */ = {isa = PBXBuildFile; fileRef = 525CB96B1C12C42700585BB6 /* maybachmusic.amr */; };
+		525CB96F1C12C42700585BB6 /* test.amr in Resources */ = {isa = PBXBuildFile; fileRef = 525CB96C1C12C42700585BB6 /* test.amr */; };
+		5264971F1C1284A8007D6353 /* pear.png in Resources */ = {isa = PBXBuildFile; fileRef = 5264971E1C1284A8007D6353 /* pear.png */; };
+		526497201C1284A8007D6353 /* pear.png in Resources */ = {isa = PBXBuildFile; fileRef = 5264971E1C1284A8007D6353 /* pear.png */; };
+		526497261C128E67007D6353 /* Trillmoji.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 526497251C128E67007D6353 /* Trillmoji.entitlements */; };
+		526497271C128E67007D6353 /* Trillmoji.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 526497251C128E67007D6353 /* Trillmoji.entitlements */; };
 		52A055261C08FCEB0054F327 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A055221C08FCEB0054F327 /* Emoji.swift */; };
 		52A055271C08FCEB0054F327 /* Emojis.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52A055231C08FCEB0054F327 /* Emojis.plist */; };
 		52A055281C08FCEB0054F327 /* EmojiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A055241C08FCEB0054F327 /* EmojiTableViewCell.swift */; };
@@ -61,6 +70,14 @@
 		5258884F1C08FBC000C89BC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		525888521C08FBC000C89BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		525888541C08FBC000C89BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		525CB9651C12A9A700585BB6 /* CustomKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CustomKeyboard.entitlements; sourceTree = "<group>"; };
+		525CB9661C12AE5F00585BB6 /* KeyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyCollectionViewCell.swift; sourceTree = "<group>"; };
+		525CB9681C12BDC500585BB6 /* KeyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyData.swift; sourceTree = "<group>"; };
+		525CB96A1C12C42700585BB6 /* huh.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = huh.amr; sourceTree = "<group>"; };
+		525CB96B1C12C42700585BB6 /* maybachmusic.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = maybachmusic.amr; sourceTree = "<group>"; };
+		525CB96C1C12C42700585BB6 /* test.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.amr; sourceTree = "<group>"; };
+		5264971E1C1284A8007D6353 /* pear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pear.png; sourceTree = "<group>"; };
+		526497251C128E67007D6353 /* Trillmoji.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Trillmoji.entitlements; sourceTree = "<group>"; };
 		52A055221C08FCEB0054F327 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		52A055231C08FCEB0054F327 /* Emojis.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Emojis.plist; sourceTree = "<group>"; };
 		52A055241C08FCEB0054F327 /* EmojiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiTableViewCell.swift; sourceTree = "<group>"; };
@@ -101,8 +118,14 @@
 		52220E381C0B9D3200555350 /* CustomKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				525CB96A1C12C42700585BB6 /* huh.amr */,
+				525CB96B1C12C42700585BB6 /* maybachmusic.amr */,
+				525CB96C1C12C42700585BB6 /* test.amr */,
+				525CB9651C12A9A700585BB6 /* CustomKeyboard.entitlements */,
 				52220E391C0B9D3200555350 /* KeyboardViewController.swift */,
 				52220E3B1C0B9D3200555350 /* Info.plist */,
+				525CB9661C12AE5F00585BB6 /* KeyCollectionViewCell.swift */,
+				525CB9681C12BDC500585BB6 /* KeyData.swift */,
 			);
 			path = CustomKeyboard;
 			sourceTree = "<group>";
@@ -130,6 +153,7 @@
 		525888471C08FBC000C89BC9 /* Trillmoji */ = {
 			isa = PBXGroup;
 			children = (
+				526497251C128E67007D6353 /* Trillmoji.entitlements */,
 				525888481C08FBC000C89BC9 /* AppDelegate.swift */,
 				5258884A1C08FBC000C89BC9 /* ViewController.swift */,
 				52A055221C08FCEB0054F327 /* Emoji.swift */,
@@ -138,6 +162,7 @@
 				52A055251C08FCEB0054F327 /* EmojiTableViewController.swift */,
 				52220E291C09009A00555350 /* 37x-Checkmark.png */,
 				52220E2A1C09009A00555350 /* 37x-Checkmark@2x.png */,
+				5264971E1C1284A8007D6353 /* pear.png */,
 				5258884C1C08FBC000C89BC9 /* Main.storyboard */,
 				5258884F1C08FBC000C89BC9 /* Assets.xcassets */,
 				525888511C08FBC000C89BC9 /* LaunchScreen.storyboard */,
@@ -210,10 +235,20 @@
 					52220E361C0B9D3200555350 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = E92EJTVEYS;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					525888441C08FBC000C89BC9 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = E92EJTVEYS;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -241,6 +276,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525CB96E1C12C42700585BB6 /* maybachmusic.amr in Resources */,
+				525CB96D1C12C42700585BB6 /* huh.amr in Resources */,
+				526497271C128E67007D6353 /* Trillmoji.entitlements in Resources */,
+				526497201C1284A8007D6353 /* pear.png in Resources */,
+				525CB96F1C12C42700585BB6 /* test.amr in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +289,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				525888531C08FBC000C89BC9 /* LaunchScreen.storyboard in Resources */,
+				5264971F1C1284A8007D6353 /* pear.png in Resources */,
 				52A055271C08FCEB0054F327 /* Emojis.plist in Resources */,
 				525888501C08FBC000C89BC9 /* Assets.xcassets in Resources */,
 				5258884E1C08FBC000C89BC9 /* Main.storyboard in Resources */,
 				52220E2B1C09009A00555350 /* 37x-Checkmark.png in Resources */,
+				526497261C128E67007D6353 /* Trillmoji.entitlements in Resources */,
 				52220E2C1C09009A00555350 /* 37x-Checkmark@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +355,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				52220E3A1C0B9D3200555350 /* KeyboardViewController.swift in Sources */,
+				525CB9671C12AE5F00585BB6 /* KeyCollectionViewCell.swift in Sources */,
+				525CB9691C12BDC500585BB6 /* KeyData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,12 +405,14 @@
 		52220E401C0B9D3200555350 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CustomKeyboard/CustomKeyboard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CustomKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mjp.Trillmoji.CustomKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -374,12 +420,14 @@
 		52220E411C0B9D3200555350 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CustomKeyboard/CustomKeyboard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CustomKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mjp.Trillmoji.CustomKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -472,6 +520,7 @@
 			baseConfigurationReference = FC62F72EBED1C03AD93959BF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Trillmoji/Trillmoji.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -489,6 +538,7 @@
 			baseConfigurationReference = DFBC664B3A0D3C04F95D47ED /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Trillmoji/Trillmoji.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -511,6 +561,7 @@
 				52220E411C0B9D3200555350 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		525888401C08FBC000C89BC9 /* Build configuration list for PBXProject "Trillmoji" */ = {
 			isa = XCConfigurationList;

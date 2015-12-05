@@ -107,7 +107,7 @@ class EmojiTableViewController: UITableViewController, UISearchResultsUpdating {
         
         self.tableView.reloadData()
     }
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
