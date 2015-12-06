@@ -9,11 +9,11 @@
 import Foundation
 
 class KeyData {
-    var imageResourceName: String
+    var text: String
     var audioResourceName: String
     
-    init(imageResourceName: String, audioResourceName: String) {
-        self.imageResourceName = imageResourceName
+    init(text: String, audioResourceName: String) {
+        self.text = text
         self.audioResourceName = audioResourceName
     }
 }
