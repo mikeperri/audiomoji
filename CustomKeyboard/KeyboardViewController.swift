@@ -12,6 +12,7 @@ import AVFoundation
 class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIGestureRecognizerDelegate {
 
     var collectionView: UICollectionView!
+    var collectionViewHeightConstraint: NSLayoutConstraint!
     var keys: [KeyData]!
     var hud: MBProgressHUD = MBProgressHUD()
     var audioPlayer: AVAudioPlayer!
@@ -53,14 +54,15 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
         // Do any additional setup after loading the view, typically from a nib.
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        layout.itemSize = CGSize(width: 50, height: 50)
+        layout.itemSize = CGSize(width: 42, height: 42)
+        layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
         
         //CGRect(x: 0,y: 0,width: 90,height: 90)
         collectionView = UICollectionView(frame: self.inputView!.frame, collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.registerClass(KeyCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
-        collectionView.backgroundColor = UIColor.purpleColor()
+        collectionView.backgroundColor = UIColor.clearColor()
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
         
@@ -73,7 +75,16 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
         
         self.inputView!.addSubview(collectionView)
         
+        let collectionViewLeftSideConstraint = NSLayoutConstraint(item: collectionView, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1.0, constant: 10.0)
+        let collectionViewTopConstraint = NSLayoutConstraint(item: collectionView, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1.0, constant: 20.0)
+        let collectionViewBottomConstraint = NSLayoutConstraint(item: collectionView, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1.0, constant: -30.0)
+        let collectionViewRightSideConstraint = NSLayoutConstraint(item: collectionView, attribute: .Right, relatedBy: .Equal, toItem: view, attribute: .Right, multiplier: 1.0, constant: -10.0)
+        collectionViewHeightConstraint = NSLayoutConstraint(item: collectionView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: (layout.itemSize.height * 2) + 40)
+        
+        view.addConstraints([collectionViewLeftSideConstraint, collectionViewTopConstraint, collectionViewBottomConstraint, collectionViewRightSideConstraint, collectionViewHeightConstraint])
+        
         addNextKeyboardButton()
+        addTitleLabel()
         addHintLabel()
     }
     
@@ -158,11 +169,26 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
         }
     }
     
+    func addTitleLabel() {
+        let titleLabel = UILabel()
+        titleLabel.text = NSLocalizedString("SOUNDS", comment: "Hint label text")
+        titleLabel.textColor = UIColor.lightGrayColor()
+        titleLabel.font = UIFont.boldSystemFontOfSize(12)
+        titleLabel.sizeToFit()
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(titleLabel)
+        
+        let titleLabelLeftSideConstraint = NSLayoutConstraint(item: titleLabel, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1.0, constant: 15.0)
+        let titleLabelTopConstraint = NSLayoutConstraint(item: titleLabel, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1.0, constant: 10.0)
+        view.addConstraints([titleLabelLeftSideConstraint, titleLabelTopConstraint])
+    }
+    
     func addNextKeyboardButton() {
         nextKeyboardButton = UIButton(type: .System)
         
         nextKeyboardButton.setTitle(NSLocalizedString("ABC", comment: "Title for 'Next Keyboard' button"), forState: .Normal)
-        nextKeyboardButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        nextKeyboardButton.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
+        nextKeyboardButton.titleLabel?.font = UIFont.systemFontOfSize(14)
         nextKeyboardButton.sizeToFit()
         nextKeyboardButton.translatesAutoresizingMaskIntoConstraints = false
         
@@ -171,21 +197,21 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
         view.addSubview(nextKeyboardButton)
         
         let nextKeyboardButtonLeftSideConstraint = NSLayoutConstraint(item: nextKeyboardButton, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1.0, constant: 10.0)
-        let nextKeyboardButtonBottomConstraint = NSLayoutConstraint(item: nextKeyboardButton, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1.0, constant: 0.0)
+        let nextKeyboardButtonBottomConstraint = NSLayoutConstraint(item: nextKeyboardButton, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1.0, constant: -7.0)
         view.addConstraints([nextKeyboardButtonLeftSideConstraint, nextKeyboardButtonBottomConstraint])
     }
-    
+
     func addHintLabel() {
         let hintLabel = UILabel()
         hintLabel.text = NSLocalizedString("Tap to copy, hold to preview", comment: "Hint label text")
-        hintLabel.textColor = UIColor.whiteColor()
+        hintLabel.textColor = UIColor.lightGrayColor()
         hintLabel.font = UIFont.systemFontOfSize(14)
         hintLabel.sizeToFit()
         hintLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(hintLabel)
         
         let hintLabelRightSideConstraint = NSLayoutConstraint(item: hintLabel, attribute: .Right, relatedBy: .Equal, toItem: view, attribute: .Right, multiplier: 1.0, constant: -10.0)
-        let hintLabelBottomConstraint = NSLayoutConstraint(item: hintLabel, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1.0, constant: -5.0)
+        let hintLabelBottomConstraint = NSLayoutConstraint(item: hintLabel, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1.0, constant: -7.0)
         view.addConstraints([hintLabelRightSideConstraint, hintLabelBottomConstraint])
     }
     

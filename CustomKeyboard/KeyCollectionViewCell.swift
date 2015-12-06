@@ -17,7 +17,7 @@ class KeyCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         
         label = UILabel(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
-        label.font = UIFont.systemFontOfSize(50)
+        label.font = UIFont.systemFontOfSize(42)
         label.textAlignment = NSTextAlignment.Center
         contentView.addSubview(label)
         
