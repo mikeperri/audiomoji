@@ -19,7 +19,8 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
     var bundle: NSBundle = NSBundle.mainBundle()
     
     //var keyboardView: UIView!
-    @IBOutlet var nextKeyboardButton: UIButton!
+    var nextKeyboardButton: UIButton!
+    var backspaceButton: UIButton!
     var buttons = [UIButton]()
     var audioButtonDict = Dictionary<Int, String>()
 
@@ -86,6 +87,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
         addNextKeyboardButton()
         addTitleLabel()
         addHintLabel()
+        addBackspaceButton()
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -210,9 +212,31 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
         hintLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(hintLabel)
         
-        let hintLabelRightSideConstraint = NSLayoutConstraint(item: hintLabel, attribute: .Right, relatedBy: .Equal, toItem: view, attribute: .Right, multiplier: 1.0, constant: -10.0)
+        let hintLabelRightSideConstraint = NSLayoutConstraint(item: hintLabel, attribute: .Right, relatedBy: .Equal, toItem: view, attribute: .Right, multiplier: 1.0, constant: -20.0)
         let hintLabelBottomConstraint = NSLayoutConstraint(item: hintLabel, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1.0, constant: -7.0)
         view.addConstraints([hintLabelRightSideConstraint, hintLabelBottomConstraint])
+    }
+    
+    func addBackspaceButton() {
+        backspaceButton = UIButton(type: .System)
+        
+        backspaceButton.setTitle("<", forState: .Normal)
+        backspaceButton.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
+        backspaceButton.titleLabel?.font = UIFont.systemFontOfSize(14)
+        backspaceButton.sizeToFit()
+        backspaceButton.translatesAutoresizingMaskIntoConstraints = false
+
+        backspaceButton.addTarget(self, action: "backspace:", forControlEvents: .TouchUpInside)
+        
+        view.addSubview(backspaceButton)
+        
+        let backspaceButtonLeftSideConstraint = NSLayoutConstraint(item: backspaceButton, attribute: .Right, relatedBy: .Equal, toItem: view, attribute: .Right, multiplier: 1.0, constant: 0.0)
+        let backspaceButtonBottomConstraint = NSLayoutConstraint(item: backspaceButton, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1.0, constant: -7.0)
+        view.addConstraints([backspaceButtonLeftSideConstraint, backspaceButtonBottomConstraint])
+    }
+    
+    func backspace() {
+        self.textDocumentProxy.deleteBackward()
     }
     
     func addAudioButton(imageResourceName: String, audioResourceName: String){

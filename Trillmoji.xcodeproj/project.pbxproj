@@ -24,8 +24,6 @@
 		526497271C128E67007D6353 /* Trillmoji.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 526497251C128E67007D6353 /* Trillmoji.entitlements */; };
 		52A055261C08FCEB0054F327 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A055221C08FCEB0054F327 /* Emoji.swift */; };
 		52A055271C08FCEB0054F327 /* Emojis.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52A055231C08FCEB0054F327 /* Emojis.plist */; };
-		52A055281C08FCEB0054F327 /* EmojiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A055241C08FCEB0054F327 /* EmojiTableViewCell.swift */; };
-		52A055291C08FCEB0054F327 /* EmojiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A055251C08FCEB0054F327 /* EmojiTableViewController.swift */; };
 		74B44AF61C133C9C005A0E6B /* cat.amr in Resources */ = {isa = PBXBuildFile; fileRef = 74B44AF51C133C9C005A0E6B /* cat.amr */; };
 		74B44AF81C13884B005A0E6B /* rocket.amr in Resources */ = {isa = PBXBuildFile; fileRef = 74B44AF71C13884B005A0E6B /* rocket.amr */; };
 		74B44B041C1390B2005A0E6B /* airhorn.amr in Resources */ = {isa = PBXBuildFile; fileRef = 74B44AF91C1390B2005A0E6B /* airhorn.amr */; };
@@ -106,8 +104,6 @@
 		526497251C128E67007D6353 /* Trillmoji.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Trillmoji.entitlements; sourceTree = "<group>"; };
 		52A055221C08FCEB0054F327 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		52A055231C08FCEB0054F327 /* Emojis.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Emojis.plist; sourceTree = "<group>"; };
-		52A055241C08FCEB0054F327 /* EmojiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiTableViewCell.swift; sourceTree = "<group>"; };
-		52A055251C08FCEB0054F327 /* EmojiTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiTableViewController.swift; sourceTree = "<group>"; };
 		74B44AF51C133C9C005A0E6B /* cat.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat.amr; sourceTree = "<group>"; };
 		74B44AF71C13884B005A0E6B /* rocket.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = rocket.amr; sourceTree = "<group>"; };
 		74B44AF91C1390B2005A0E6B /* airhorn.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = airhorn.amr; sourceTree = "<group>"; };
@@ -215,8 +211,6 @@
 				5258884A1C08FBC000C89BC9 /* ViewController.swift */,
 				52A055221C08FCEB0054F327 /* Emoji.swift */,
 				52A055231C08FCEB0054F327 /* Emojis.plist */,
-				52A055241C08FCEB0054F327 /* EmojiTableViewCell.swift */,
-				52A055251C08FCEB0054F327 /* EmojiTableViewController.swift */,
 				52220E291C09009A00555350 /* 37x-Checkmark.png */,
 				52220E2A1C09009A00555350 /* 37x-Checkmark@2x.png */,
 				5258884C1C08FBC000C89BC9 /* Main.storyboard */,
@@ -552,9 +546,7 @@
 			files = (
 				52A055261C08FCEB0054F327 /* Emoji.swift in Sources */,
 				5258884B1C08FBC000C89BC9 /* ViewController.swift in Sources */,
-				52A055281C08FCEB0054F327 /* EmojiTableViewCell.swift in Sources */,
 				525888491C08FBC000C89BC9 /* AppDelegate.swift in Sources */,
-				52A055291C08FCEB0054F327 /* EmojiTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

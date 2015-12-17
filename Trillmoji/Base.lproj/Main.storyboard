@@ -1,91 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CvX-Ix-rvV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CvX-Ix-rvV">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Trillmoji-->
-        <scene sceneID="FIz-Oa-Ae0">
-            <objects>
-                <tableViewController id="f0L-te-Utb" customClass="EmojiTableViewController" customModule="Trillmoji" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vHi-B5-nmL">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" red="0.79254584868818301" green="1" blue="0.99895714525395507" alpha="1" colorSpace="calibratedRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmojiTableViewCell" id="Fby-1l-F8d" customClass="EmojiTableViewCell" customModule="Trillmoji" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fby-1l-F8d" id="XoH-6e-hzT">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBU-Rh-OCr">
-                                            <rect key="frame" x="16" y="8" width="345.5" height="27.5"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gg4-fV-JpP">
-                                            <rect key="frame" x="361.5" y="8" width="230.5" height="27.5"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <animations/>
-                                    <constraints>
-                                        <constraint firstItem="Gg4-fV-JpP" firstAttribute="leading" secondItem="uBU-Rh-OCr" secondAttribute="trailing" id="0TQ-oa-227"/>
-                                        <constraint firstItem="Gg4-fV-JpP" firstAttribute="height" secondItem="uBU-Rh-OCr" secondAttribute="height" id="3i7-CX-1dB"/>
-                                        <constraint firstItem="Gg4-fV-JpP" firstAttribute="leading" secondItem="uBU-Rh-OCr" secondAttribute="trailing" constant="8" id="857-Vz-wZt"/>
-                                        <constraint firstItem="uBU-Rh-OCr" firstAttribute="width" secondItem="Gg4-fV-JpP" secondAttribute="height" multiplier="151:9" constant="-7.8888888888889142" id="JyC-Mg-cd0"/>
-                                        <constraint firstItem="Gg4-fV-JpP" firstAttribute="trailing" secondItem="XoH-6e-hzT" secondAttribute="trailingMargin" id="JzQ-HB-C3j"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Gg4-fV-JpP" secondAttribute="bottom" id="YHM-2G-vbU"/>
-                                        <constraint firstItem="Gg4-fV-JpP" firstAttribute="leading" secondItem="uBU-Rh-OCr" secondAttribute="trailing" constant="8" id="Zlh-5h-SN1"/>
-                                        <constraint firstItem="uBU-Rh-OCr" firstAttribute="width" secondItem="Gg4-fV-JpP" secondAttribute="width" multiplier="1.5" id="d3d-7e-H2k"/>
-                                        <constraint firstItem="Gg4-fV-JpP" firstAttribute="leading" secondItem="uBU-Rh-OCr" secondAttribute="trailing" constant="8" id="dOh-Lu-0ov"/>
-                                        <constraint firstItem="Gg4-fV-JpP" firstAttribute="top" secondItem="XoH-6e-hzT" secondAttribute="topMargin" id="gox-9q-QCE"/>
-                                        <constraint firstItem="uBU-Rh-OCr" firstAttribute="top" secondItem="XoH-6e-hzT" secondAttribute="topMargin" id="qRn-qp-rWa"/>
-                                        <constraint firstItem="Gg4-fV-JpP" firstAttribute="trailing" secondItem="XoH-6e-hzT" secondAttribute="trailingMargin" id="stZ-4K-osi"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="uBU-Rh-OCr" secondAttribute="bottom" id="swf-9Y-Fsw"/>
-                                        <constraint firstItem="uBU-Rh-OCr" firstAttribute="leading" secondItem="XoH-6e-hzT" secondAttribute="leadingMargin" constant="8" id="xB4-Gu-RzT"/>
-                                    </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="JyC-Mg-cd0"/>
-                                            <exclude reference="857-Vz-wZt"/>
-                                            <exclude reference="Zlh-5h-SN1"/>
-                                            <exclude reference="dOh-Lu-0ov"/>
-                                        </mask>
-                                    </variation>
-                                </tableViewCellContentView>
-                                <animations/>
-                                <connections>
-                                    <outlet property="emojiTextLabel" destination="uBU-Rh-OCr" id="pbS-C1-Phg"/>
-                                    <outlet property="nameLabel" destination="Gg4-fV-JpP" id="MnZ-ou-Rff"/>
-                                    <outlet property="textLabel" destination="uBU-Rh-OCr" id="5Po-a8-FEt"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="f0L-te-Utb" id="1BN-tg-kqh"/>
-                            <outlet property="delegate" destination="f0L-te-Utb" id="I4E-5J-pDH"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Trillmoji" id="3oO-M0-uqa"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="phb-4i-P6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1003" y="-487"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="sMo-F9-Oac">
             <objects>
@@ -93,19 +12,33 @@
                     <navigationBar key="navigationBar" alpha="0.55000000000000004" contentMode="scaleToFill" barStyle="black" backIndicatorImage="HeaderBG.png" id="sDF-RU-1XV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                         <color key="barTintColor" red="0.30588235294117649" green="0.15294117647058825" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="f0L-te-Utb" kind="relationship" relationship="rootViewController" id="iek-JV-eaA"/>
+                        <segue destination="ODS-SZ-xuf" kind="relationship" relationship="rootViewController" id="Qhv-wT-jrh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zb6-9H-Ofl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120" y="-519"/>
+            <point key="canvasLocation" x="-72" y="-459"/>
+        </scene>
+        <!--To Install-->
+        <scene sceneID="aGy-td-XvH">
+            <objects>
+                <viewController id="ODS-SZ-xuf" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="I3W-xF-J6v">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    </webView>
+                    <navigationItem key="navigationItem" title="To Install" id="RgT-kg-dxx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewN-5i-aKz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="784" y="-472"/>
         </scene>
     </scenes>
     <resources>
