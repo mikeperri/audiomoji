@@ -208,19 +208,21 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
         hintLabel.text = NSLocalizedString("Tap to copy, hold to preview", comment: "Hint label text")
         hintLabel.textColor = UIColor.lightGrayColor()
         hintLabel.font = UIFont.systemFontOfSize(14)
-        hintLabel.sizeToFit()
+        hintLabel.textAlignment = NSTextAlignment.Center
+        //hintLabel.sizeToFit()
         hintLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(hintLabel)
         
-        let hintLabelRightSideConstraint = NSLayoutConstraint(item: hintLabel, attribute: .Right, relatedBy: .Equal, toItem: view, attribute: .Right, multiplier: 1.0, constant: -20.0)
-        let hintLabelBottomConstraint = NSLayoutConstraint(item: hintLabel, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1.0, constant: -7.0)
-        view.addConstraints([hintLabelRightSideConstraint, hintLabelBottomConstraint])
+        let hintLabelLeftSideConstraint = NSLayoutConstraint(item: hintLabel, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1.0, constant: 25.0)
+        let hintLabelRightSideConstraint = NSLayoutConstraint(item: hintLabel, attribute: .Right, relatedBy: .Equal, toItem: view, attribute: .Right, multiplier: 1.0, constant: -25.0)
+        let hintLabelBottomConstraint = NSLayoutConstraint(item: hintLabel, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1.0, constant: -14.0)
+        view.addConstraints([hintLabelLeftSideConstraint, hintLabelRightSideConstraint, hintLabelBottomConstraint])
     }
     
     func addBackspaceButton() {
         backspaceButton = UIButton(type: .System)
         
-        backspaceButton.setTitle("<", forState: .Normal)
+        backspaceButton.setTitle("DEL", forState: .Normal)
         backspaceButton.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
         backspaceButton.titleLabel?.font = UIFont.systemFontOfSize(14)
         backspaceButton.sizeToFit()
@@ -230,7 +232,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
         
         view.addSubview(backspaceButton)
         
-        let backspaceButtonLeftSideConstraint = NSLayoutConstraint(item: backspaceButton, attribute: .Right, relatedBy: .Equal, toItem: view, attribute: .Right, multiplier: 1.0, constant: 0.0)
+        let backspaceButtonLeftSideConstraint = NSLayoutConstraint(item: backspaceButton, attribute: .Right, relatedBy: .Equal, toItem: view, attribute: .Right, multiplier: 1.0, constant: -10.0)
         let backspaceButtonBottomConstraint = NSLayoutConstraint(item: backspaceButton, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1.0, constant: -7.0)
         view.addConstraints([backspaceButtonLeftSideConstraint, backspaceButtonBottomConstraint])
     }

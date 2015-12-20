@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CvX-Ix-rvV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CvX-Ix-rvV">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -28,13 +29,61 @@
         <!--To Install-->
         <scene sceneID="aGy-td-XvH">
             <objects>
-                <viewController id="ODS-SZ-xuf" sceneMemberID="viewController">
-                    <webView key="view" contentMode="scaleToFill" id="I3W-xF-J6v">
+                <viewController id="ODS-SZ-xuf" customClass="ViewController" customModule="Trillmoji" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kwq-Id-CtO"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gzo-Yv-2ay"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sdv-rL-gWt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                    </webView>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmu-Ws-vo6">
+                                <rect key="frame" x="20" y="72" width="560" height="394"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="394" id="Rde-PX-ceS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Rde-PX-ceS"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Access Info Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5X-Du-5CH">
+                                <rect key="frame" x="20" y="491" width="560" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="1Z3-jv-WhR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G5X-Du-5CH" firstAttribute="top" secondItem="kmu-Ws-vo6" secondAttribute="bottom" constant="25" id="Gz0-qh-P8L"/>
+                            <constraint firstItem="kmu-Ws-vo6" firstAttribute="trailing" secondItem="sdv-rL-gWt" secondAttribute="trailingMargin" id="Jr5-GF-8c4"/>
+                            <constraint firstItem="G5X-Du-5CH" firstAttribute="leading" secondItem="kmu-Ws-vo6" secondAttribute="leading" id="XR9-Yh-2bK"/>
+                            <constraint firstItem="Gzo-Yv-2ay" firstAttribute="top" secondItem="kmu-Ws-vo6" secondAttribute="bottom" constant="8" symbolic="YES" id="eUZ-UX-K4K"/>
+                            <constraint firstItem="G5X-Du-5CH" firstAttribute="trailing" secondItem="kmu-Ws-vo6" secondAttribute="trailing" id="hVA-Bc-0y4"/>
+                            <constraint firstAttribute="bottom" secondItem="G5X-Du-5CH" secondAttribute="bottom" constant="20" symbolic="YES" id="rCJ-kt-GqK"/>
+                            <constraint firstItem="kmu-Ws-vo6" firstAttribute="leading" secondItem="sdv-rL-gWt" secondAttribute="leadingMargin" id="riW-N5-TzA"/>
+                            <constraint firstItem="kmu-Ws-vo6" firstAttribute="top" secondItem="kwq-Id-CtO" secondAttribute="bottom" constant="8" symbolic="YES" id="vzi-wC-QkQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="eUZ-UX-K4K"/>
+                            </mask>
+                        </variation>
+                    </view>
                     <navigationItem key="navigationItem" title="To Install" id="RgT-kg-dxx"/>
+                    <connections>
+                        <outlet property="fullAccessInfoLabel" destination="G5X-Du-5CH" id="WfZ-VD-0jA"/>
+                        <outlet property="stepsLabel" destination="kmu-Ws-vo6" id="bC7-KW-3Z1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ewN-5i-aKz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
