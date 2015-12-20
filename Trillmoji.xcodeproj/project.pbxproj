@@ -16,14 +16,14 @@
 		5258884E1C08FBC000C89BC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5258884C1C08FBC000C89BC9 /* Main.storyboard */; };
 		525888501C08FBC000C89BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5258884F1C08FBC000C89BC9 /* Assets.xcassets */; };
 		525888531C08FBC000C89BC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525888511C08FBC000C89BC9 /* LaunchScreen.storyboard */; };
-		525CB9671C12AE5F00585BB6 /* KeyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CB9661C12AE5F00585BB6 /* KeyCollectionViewCell.swift */; };
 		525CB9691C12BDC500585BB6 /* KeyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CB9681C12BDC500585BB6 /* KeyData.swift */; };
 		525CB96D1C12C42700585BB6 /* huh.amr in Resources */ = {isa = PBXBuildFile; fileRef = 525CB96A1C12C42700585BB6 /* huh.amr */; };
-		525CB96E1C12C42700585BB6 /* mmg.amr in Resources */ = {isa = PBXBuildFile; fileRef = 525CB96B1C12C42700585BB6 /* mmg.amr */; };
 		526497261C128E67007D6353 /* Trillmoji.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 526497251C128E67007D6353 /* Trillmoji.entitlements */; };
 		526497271C128E67007D6353 /* Trillmoji.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 526497251C128E67007D6353 /* Trillmoji.entitlements */; };
 		52A055261C08FCEB0054F327 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A055221C08FCEB0054F327 /* Emoji.swift */; };
 		52A055271C08FCEB0054F327 /* Emojis.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52A055231C08FCEB0054F327 /* Emojis.plist */; };
+		5C16C1A51C27419600C543B1 /* KeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C16C1A31C27401E00C543B1 /* KeyCell.swift */; };
+		5C16C1A61C2757A800C543B1 /* KeyboardViewControllerSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C16C1A11C273A7400C543B1 /* KeyboardViewControllerSB.storyboard */; };
 		74B44AF61C133C9C005A0E6B /* cat.amr in Resources */ = {isa = PBXBuildFile; fileRef = 74B44AF51C133C9C005A0E6B /* cat.amr */; };
 		74B44AF81C13884B005A0E6B /* rocket.amr in Resources */ = {isa = PBXBuildFile; fileRef = 74B44AF71C13884B005A0E6B /* rocket.amr */; };
 		74B44B041C1390B2005A0E6B /* airhorn.amr in Resources */ = {isa = PBXBuildFile; fileRef = 74B44AF91C1390B2005A0E6B /* airhorn.amr */; };
@@ -46,7 +46,6 @@
 		74B44B2D1C139CEE005A0E6B /* crickets.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74B44B1D1C139CEE005A0E6B /* crickets.wav */; };
 		74B44B2E1C139CEE005A0E6B /* dog.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74B44B1E1C139CEE005A0E6B /* dog.wav */; };
 		74B44B2F1C139CEE005A0E6B /* huh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74B44B1F1C139CEE005A0E6B /* huh.wav */; };
-		74B44B301C139CEE005A0E6B /* mmg.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74B44B201C139CEE005A0E6B /* mmg.wav */; };
 		74B44B311C139CEE005A0E6B /* peach.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74B44B211C139CEE005A0E6B /* peach.wav */; };
 		74B44B321C139CEE005A0E6B /* rimshot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74B44B221C139CEE005A0E6B /* rimshot.wav */; };
 		74B44B331C139CEE005A0E6B /* rocket.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74B44B231C139CEE005A0E6B /* rocket.wav */; };
@@ -97,13 +96,13 @@
 		525888521C08FBC000C89BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		525888541C08FBC000C89BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		525CB9651C12A9A700585BB6 /* CustomKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CustomKeyboard.entitlements; sourceTree = "<group>"; };
-		525CB9661C12AE5F00585BB6 /* KeyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyCollectionViewCell.swift; sourceTree = "<group>"; };
 		525CB9681C12BDC500585BB6 /* KeyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyData.swift; sourceTree = "<group>"; };
 		525CB96A1C12C42700585BB6 /* huh.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = huh.amr; sourceTree = "<group>"; };
-		525CB96B1C12C42700585BB6 /* mmg.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = mmg.amr; sourceTree = "<group>"; };
 		526497251C128E67007D6353 /* Trillmoji.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Trillmoji.entitlements; sourceTree = "<group>"; };
 		52A055221C08FCEB0054F327 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		52A055231C08FCEB0054F327 /* Emojis.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Emojis.plist; sourceTree = "<group>"; };
+		5C16C1A11C273A7400C543B1 /* KeyboardViewControllerSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = KeyboardViewControllerSB.storyboard; path = ../Trillmoji/KeyboardViewControllerSB.storyboard; sourceTree = "<group>"; };
+		5C16C1A31C27401E00C543B1 /* KeyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyCell.swift; path = CustomKeyboard/KeyCell.swift; sourceTree = SOURCE_ROOT; };
 		74B44AF51C133C9C005A0E6B /* cat.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat.amr; sourceTree = "<group>"; };
 		74B44AF71C13884B005A0E6B /* rocket.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = rocket.amr; sourceTree = "<group>"; };
 		74B44AF91C1390B2005A0E6B /* airhorn.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = airhorn.amr; sourceTree = "<group>"; };
@@ -127,7 +126,6 @@
 		74B44B1D1C139CEE005A0E6B /* crickets.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = crickets.wav; sourceTree = "<group>"; };
 		74B44B1E1C139CEE005A0E6B /* dog.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dog.wav; sourceTree = "<group>"; };
 		74B44B1F1C139CEE005A0E6B /* huh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = huh.wav; sourceTree = "<group>"; };
-		74B44B201C139CEE005A0E6B /* mmg.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mmg.wav; sourceTree = "<group>"; };
 		74B44B211C139CEE005A0E6B /* peach.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = peach.wav; sourceTree = "<group>"; };
 		74B44B221C139CEE005A0E6B /* rimshot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rimshot.wav; sourceTree = "<group>"; };
 		74B44B231C139CEE005A0E6B /* rocket.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rocket.wav; sourceTree = "<group>"; };
@@ -176,9 +174,10 @@
 				74B44B141C13992E005A0E6B /* CustomKeyboard-Bridging-Header.h */,
 				525CB9651C12A9A700585BB6 /* CustomKeyboard.entitlements */,
 				52220E391C0B9D3200555350 /* KeyboardViewController.swift */,
+				5C16C1A31C27401E00C543B1 /* KeyCell.swift */,
 				52220E3B1C0B9D3200555350 /* Info.plist */,
-				525CB9661C12AE5F00585BB6 /* KeyCollectionViewCell.swift */,
 				525CB9681C12BDC500585BB6 /* KeyData.swift */,
+				5C16C1A11C273A7400C543B1 /* KeyboardViewControllerSB.storyboard */,
 			);
 			path = CustomKeyboard;
 			sourceTree = "<group>";
@@ -242,7 +241,6 @@
 				74B44AFD1C1390B2005A0E6B /* crickets.amr */,
 				74B44AFE1C1390B2005A0E6B /* dog.amr */,
 				525CB96A1C12C42700585BB6 /* huh.amr */,
-				525CB96B1C12C42700585BB6 /* mmg.amr */,
 				74B44AFF1C1390B2005A0E6B /* peach.amr */,
 				74B44B011C1390B2005A0E6B /* rimshot.amr */,
 				74B44AF71C13884B005A0E6B /* rocket.amr */,
@@ -265,7 +263,6 @@
 				74B44B1D1C139CEE005A0E6B /* crickets.wav */,
 				74B44B1E1C139CEE005A0E6B /* dog.wav */,
 				74B44B1F1C139CEE005A0E6B /* huh.wav */,
-				74B44B201C139CEE005A0E6B /* mmg.wav */,
 				74B44B211C139CEE005A0E6B /* peach.wav */,
 				74B44B221C139CEE005A0E6B /* rimshot.wav */,
 				74B44B231C139CEE005A0E6B /* rocket.wav */,
@@ -406,10 +403,9 @@
 				74B44AF61C133C9C005A0E6B /* cat.amr in Resources */,
 				74B44B111C13926E005A0E6B /* sad-trombone.amr in Resources */,
 				74B44B051C1390B2005A0E6B /* applause.amr in Resources */,
-				525CB96E1C12C42700585BB6 /* mmg.amr in Resources */,
+				5C16C1A61C2757A800C543B1 /* KeyboardViewControllerSB.storyboard in Resources */,
 				74B44B081C1390B2005A0E6B /* crickets.amr in Resources */,
 				74B44B371C139CEE005A0E6B /* turkey.wav in Resources */,
-				74B44B301C139CEE005A0E6B /* mmg.wav in Resources */,
 				74B44B2F1C139CEE005A0E6B /* huh.wav in Resources */,
 				525CB96D1C12C42700585BB6 /* huh.amr in Resources */,
 				74B44B341C139CEE005A0E6B /* rooster.wav in Resources */,
@@ -534,8 +530,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C16C1A51C27419600C543B1 /* KeyCell.swift in Sources */,
 				52220E3A1C0B9D3200555350 /* KeyboardViewController.swift in Sources */,
-				525CB9671C12AE5F00585BB6 /* KeyCollectionViewCell.swift in Sources */,
 				525CB9691C12BDC500585BB6 /* KeyData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
