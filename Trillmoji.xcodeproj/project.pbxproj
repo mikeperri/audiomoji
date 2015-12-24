@@ -20,8 +20,7 @@
 		525CB96D1C12C42700585BB6 /* huh.amr in Resources */ = {isa = PBXBuildFile; fileRef = 525CB96A1C12C42700585BB6 /* huh.amr */; };
 		526497261C128E67007D6353 /* Trillmoji.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 526497251C128E67007D6353 /* Trillmoji.entitlements */; };
 		526497271C128E67007D6353 /* Trillmoji.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 526497251C128E67007D6353 /* Trillmoji.entitlements */; };
-		52A055261C08FCEB0054F327 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A055221C08FCEB0054F327 /* Emoji.swift */; };
-		52A055271C08FCEB0054F327 /* Emojis.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52A055231C08FCEB0054F327 /* Emojis.plist */; };
+		52B81A471C2C9FE90064A734 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DA732EBB53335DB8131C2B /* libPods.a */; };
 		5C16C1A51C27419600C543B1 /* KeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C16C1A31C27401E00C543B1 /* KeyCell.swift */; };
 		5C16C1A61C2757A800C543B1 /* KeyboardViewControllerSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C16C1A11C273A7400C543B1 /* KeyboardViewControllerSB.storyboard */; };
 		74B44AF61C133C9C005A0E6B /* cat.amr in Resources */ = {isa = PBXBuildFile; fileRef = 74B44AF51C133C9C005A0E6B /* cat.amr */; };
@@ -53,7 +52,6 @@
 		74B44B351C139CEE005A0E6B /* sad-trombone.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74B44B251C139CEE005A0E6B /* sad-trombone.wav */; };
 		74B44B361C139CEE005A0E6B /* siren.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74B44B261C139CEE005A0E6B /* siren.wav */; };
 		74B44B371C139CEE005A0E6B /* turkey.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74B44B271C139CEE005A0E6B /* turkey.wav */; };
-		9716B2D0355EF7DF72095FC1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DA732EBB53335DB8131C2B /* libPods.a */; };
 		A87732C7AB30075DE777E06C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DA732EBB53335DB8131C2B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -99,8 +97,6 @@
 		525CB9681C12BDC500585BB6 /* KeyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyData.swift; sourceTree = "<group>"; };
 		525CB96A1C12C42700585BB6 /* huh.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = huh.amr; sourceTree = "<group>"; };
 		526497251C128E67007D6353 /* Trillmoji.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Trillmoji.entitlements; sourceTree = "<group>"; };
-		52A055221C08FCEB0054F327 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
-		52A055231C08FCEB0054F327 /* Emojis.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Emojis.plist; sourceTree = "<group>"; };
 		5C16C1A11C273A7400C543B1 /* KeyboardViewControllerSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = KeyboardViewControllerSB.storyboard; path = ../Trillmoji/KeyboardViewControllerSB.storyboard; sourceTree = "<group>"; };
 		5C16C1A31C27401E00C543B1 /* KeyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyCell.swift; path = CustomKeyboard/KeyCell.swift; sourceTree = SOURCE_ROOT; };
 		74B44AF51C133C9C005A0E6B /* cat.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat.amr; sourceTree = "<group>"; };
@@ -143,7 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9716B2D0355EF7DF72095FC1 /* libPods.a in Frameworks */,
+				52B81A471C2C9FE90064A734 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,8 +204,6 @@
 				526497251C128E67007D6353 /* Trillmoji.entitlements */,
 				525888481C08FBC000C89BC9 /* AppDelegate.swift */,
 				5258884A1C08FBC000C89BC9 /* ViewController.swift */,
-				52A055221C08FCEB0054F327 /* Emoji.swift */,
-				52A055231C08FCEB0054F327 /* Emojis.plist */,
 				52220E291C09009A00555350 /* 37x-Checkmark.png */,
 				52220E2A1C09009A00555350 /* 37x-Checkmark@2x.png */,
 				5258884C1C08FBC000C89BC9 /* Main.storyboard */,
@@ -421,7 +415,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				525888531C08FBC000C89BC9 /* LaunchScreen.storyboard in Resources */,
-				52A055271C08FCEB0054F327 /* Emojis.plist in Resources */,
 				525888501C08FBC000C89BC9 /* Assets.xcassets in Resources */,
 				5258884E1C08FBC000C89BC9 /* Main.storyboard in Resources */,
 				52220E2B1C09009A00555350 /* 37x-Checkmark.png in Resources */,
@@ -505,7 +498,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\ncd \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\nif [[ -d \"Frameworks\" ]]; then\nrm -fr Frameworks\nfi";
 			showEnvVarsInLog = 0;
 		};
 		ADF126B6D3BE2DD7239FE011 /* Embed Pods Frameworks */ = {
@@ -540,7 +533,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52A055261C08FCEB0054F327 /* Emoji.swift in Sources */,
 				5258884B1C08FBC000C89BC9 /* ViewController.swift in Sources */,
 				525888491C08FBC000C89BC9 /* AppDelegate.swift in Sources */,
 			);

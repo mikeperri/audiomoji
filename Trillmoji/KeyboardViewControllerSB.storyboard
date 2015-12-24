@@ -26,7 +26,7 @@
                                     <constraint firstAttribute="width" constant="30" id="c3H-bw-kg7"/>
                                 </constraints>
                                 <state key="normal" title="ABC">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.46192247209509474" green="0.83992398095790322" blue="0.97114363579005236" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -44,7 +44,7 @@
                                     <constraint firstAttribute="height" constant="30" id="Pv5-Ia-nbt"/>
                                 </constraints>
                                 <state key="normal" title="DEL">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.46192247209509474" green="0.83992398095790322" blue="0.97114363579005236" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="backspace" destination="BF0-VO-8ow" eventType="touchUpInside" id="wEs-RL-ocf"/>
@@ -106,7 +106,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hpX-dA-wPm" firstAttribute="top" secondItem="3Bb-KL-DhN" secondAttribute="bottom" id="1gC-8f-stH"/>
                             <constraint firstItem="hpX-dA-wPm" firstAttribute="leading" secondItem="kaM-xA-BOH" secondAttribute="leadingMargin" constant="-20" id="6pJ-Rf-WDX"/>

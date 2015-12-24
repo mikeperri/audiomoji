@@ -10,12 +10,12 @@
         <scene sceneID="sMo-F9-Oac">
             <objects>
                 <navigationController id="CvX-Ix-rvV" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" alpha="0.55000000000000004" contentMode="scaleToFill" barStyle="black" backIndicatorImage="HeaderBG.png" id="sDF-RU-1XV">
+                    <navigationBar key="navigationBar" alpha="0.55000000000000004" contentMode="scaleToFill" barStyle="black" id="sDF-RU-1XV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.30588235294117649" green="0.15294117647058825" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textColor" red="0.46560928840220989" green="0.84662780165683471" blue="0.97889478107801053" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -38,8 +38,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmu-Ws-vo6">
-                                <rect key="frame" x="20" y="72" width="560" height="394"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Steps Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmu-Ws-vo6">
+                                <rect key="frame" x="20" y="72" width="560" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="394" id="Rde-PX-ceS"/>
                                 </constraints>
@@ -52,10 +52,10 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Access Info Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5X-Du-5CH">
-                                <rect key="frame" x="20" y="491" width="560" height="89"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Access Info Label" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5X-Du-5CH">
+                                <rect key="frame" x="20" y="512" width="560" height="68"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="89" id="1Z3-jv-WhR"/>
+                                    <constraint firstAttribute="height" constant="68" id="1Z3-jv-WhR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -64,7 +64,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="G5X-Du-5CH" firstAttribute="top" secondItem="kmu-Ws-vo6" secondAttribute="bottom" constant="25" id="Gz0-qh-P8L"/>
+                            <constraint firstItem="G5X-Du-5CH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kmu-Ws-vo6" secondAttribute="bottom" constant="20" id="Gz0-qh-P8L"/>
                             <constraint firstItem="kmu-Ws-vo6" firstAttribute="trailing" secondItem="sdv-rL-gWt" secondAttribute="trailingMargin" id="Jr5-GF-8c4"/>
                             <constraint firstItem="G5X-Du-5CH" firstAttribute="leading" secondItem="kmu-Ws-vo6" secondAttribute="leading" id="XR9-Yh-2bK"/>
                             <constraint firstItem="Gzo-Yv-2ay" firstAttribute="top" secondItem="kmu-Ws-vo6" secondAttribute="bottom" constant="8" symbolic="YES" id="eUZ-UX-K4K"/>
@@ -80,6 +80,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="To Install" id="RgT-kg-dxx"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="fullAccessInfoLabel" destination="G5X-Du-5CH" id="WfZ-VD-0jA"/>
                         <outlet property="stepsLabel" destination="kmu-Ws-vo6" id="bC7-KW-3Z1"/>
@@ -90,8 +91,5 @@
             <point key="canvasLocation" x="784" y="-472"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="HeaderBG.png" width="640" height="88"/>
-    </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

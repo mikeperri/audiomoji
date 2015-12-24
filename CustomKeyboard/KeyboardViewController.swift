@@ -25,7 +25,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
 
     override func viewDidLoad() {
         
-        //TODO: load from plist
+        // TODO: load from plist
         keys = [KeyData]()
         keys.append(KeyData(text: "📣", audioResourceName: "airhorn"))
         keys.append(KeyData(text: "👏", audioResourceName: "applause"))
@@ -43,7 +43,6 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
         keys.append(KeyData(text: "🚔", audioResourceName: "siren"))
         keys.append(KeyData(text: "🦃", audioResourceName: "turkey"))
         
-        //Long press
         let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "handleLongPress:")
         longPressGestureRecognizer.delegate = self
         longPressGestureRecognizer.minimumPressDuration = 1.0
@@ -79,16 +78,38 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
         return cell
     }
     
+    // Emoji was tapped
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let keyData = keys[indexPath.item]
-        let progressHUD = MBProgressHUD.showHUDAddedTo(self.view.superview, animated: true)
-        progressHUD.mode = MBProgressHUDMode.CustomView
-        progressHUD.labelText = "Copied"
-        progressHUD.hide(true, afterDelay: 1)
-        
-        pasteAudio(keyData.audioResourceName)
+        copyAudio(keyData.audioResourceName)
     }
     
+    func copyAudio(resourceName: String) {
+        if let pasteboard: UIPasteboard = UIPasteboard.generalPasteboard() {
+            if let path = NSBundle.mainBundle().pathForResource(resourceName, ofType: "amr") {
+                if let amrData = NSData(contentsOfFile: path) {
+                    let dict = NSMutableDictionary(capacity: 3)
+                    dict.setValue("Audio Message.amr", forKey: "public.url-name")
+                    dict.setValue("Audio Message.amr", forKey: "public.utf8-plain-text")
+                    dict.setValue(amrData, forKey: "org.3gpp.adaptive-multi-rate-audio")
+                    pasteboard.items = NSArray(object: dict) as [AnyObject]
+                    
+                    showHUD("Copied")
+                }
+            }
+        } else {
+            showHUD("Please allow full access.")
+        }
+    }
+    
+    func showHUD(text: String) {
+        let progressHUD = MBProgressHUD.showHUDAddedTo(self.view.superview, animated: true)
+        progressHUD.mode = MBProgressHUDMode.CustomView
+        progressHUD.labelText = text
+        progressHUD.hide(true, afterDelay: 1)
+    }
+    
+    // Emoji was held
     func handleLongPress(sender: UILongPressGestureRecognizer) {
         
         if sender.state == UIGestureRecognizerState.Ended || sender.state == UIGestureRecognizerState.Cancelled {
@@ -106,40 +127,19 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
                     do {
                         try audioPlayer = AVAudioPlayer(contentsOfURL: soundURL)
                         audioPlayer.play()
-                    } catch {
-                        
-                    }
+                    } catch {}
                 }
             }
         }
     }
     
-    //Action for next keyboard button
+    // Next keyboard button action
     @IBAction override func advanceToNextInputMode() {
         super.advanceToNextInputMode()
     }
     
+    // Backspace button action
     @IBAction func backspace() {
         self.textDocumentProxy.deleteBackward()
-    }
-    
-    @IBAction func buttonAction(sender: UIButton) {
-        if let audioResourceName = audioButtonDict[sender.tag] {
-            pasteAudio(audioResourceName)
-        }
-    }
-
-    func pasteAudio(resourceName: String) {
-        if let pasteboard: UIPasteboard = UIPasteboard.generalPasteboard() {
-            if let path = NSBundle.mainBundle().pathForResource(resourceName, ofType: "amr") {
-                if let amrData = NSData(contentsOfFile: path) {
-                    let dict = NSMutableDictionary(capacity: 3)
-                    dict.setValue("Audio Message.amr", forKey: "public.url-name")
-                    dict.setValue("Audio Message.amr", forKey: "public.utf8-plain-text")
-                    dict.setValue(amrData, forKey: "org.3gpp.adaptive-multi-rate-audio")
-                    pasteboard.items = NSArray(object: dict) as [AnyObject]
-                }
-            }
-        }
     }
 }
