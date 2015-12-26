@@ -12,37 +12,14 @@ import AVFoundation
 class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UIGestureRecognizerDelegate {
 
     @IBOutlet var collectionView: UICollectionView!
-    @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    //weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
-    var keys: [KeyData]!
-    var hud: MBProgressHUD = MBProgressHUD()
+    let keys: [Trillmoji] = Trillmojis.get()
+    let hud: MBProgressHUD = MBProgressHUD()
+    let bundle: NSBundle = NSBundle.mainBundle()
     var audioPlayer: AVAudioPlayer!
-    var bundle: NSBundle = NSBundle.mainBundle()
-    
-    var nextKeyboardButton: UIButton!
-    var backspaceButton: UIButton!
-    var audioButtonDict = Dictionary<Int, String>()
 
     override func viewDidLoad() {
-        
-        // TODO: load from plist
-        keys = [KeyData]()
-        keys.append(KeyData(text: "📣", audioResourceName: "airhorn"))
-        keys.append(KeyData(text: "👏", audioResourceName: "applause"))
-        keys.append(KeyData(text: "🍺", audioResourceName: "beer"))
-        keys.append(KeyData(text: "💰", audioResourceName: "cash"))
-        keys.append(KeyData(text: "🐱", audioResourceName: "cat"))
-        keys.append(KeyData(text: "🔕", audioResourceName: "crickets"))
-        keys.append(KeyData(text: "🐶", audioResourceName: "dog"))
-        keys.append(KeyData(text: "🍐", audioResourceName: "huh"))
-        keys.append(KeyData(text: "💩", audioResourceName: "peach"))
-        keys.append(KeyData(text: "😹", audioResourceName: "rimshot"))
-        keys.append(KeyData(text: "🚀", audioResourceName: "rocket"))
-        keys.append(KeyData(text: "🐓", audioResourceName: "rooster"))
-        keys.append(KeyData(text: "😿", audioResourceName: "sad-trombone"))
-        keys.append(KeyData(text: "🚔", audioResourceName: "siren"))
-        keys.append(KeyData(text: "🦃", audioResourceName: "turkey"))
-        
         let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "handleLongPress:")
         longPressGestureRecognizer.delegate = self
         longPressGestureRecognizer.minimumPressDuration = 1.0
@@ -57,7 +34,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
             toItem: nil,
             attribute: .NotAnAttribute,
             multiplier: 1,
-            constant: 90
+            constant: 168
         ));
     }
 
@@ -80,13 +57,12 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
     
     // Emoji was tapped
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let keyData = keys[indexPath.item]
-        copyAudio(keyData.audioResourceName)
+        copyAudio(keys[indexPath.item])
     }
     
-    func copyAudio(resourceName: String) {
+    func copyAudio(trillmoji: Trillmoji) {
         if let pasteboard: UIPasteboard = UIPasteboard.generalPasteboard() {
-            if let path = NSBundle.mainBundle().pathForResource(resourceName, ofType: "amr") {
+            if let path = NSBundle.mainBundle().pathForResource(trillmoji.audioResourceName, ofType: "amr") {
                 if let amrData = NSData(contentsOfFile: path) {
                     let dict = NSMutableDictionary(capacity: 3)
                     dict.setValue("Audio Message.amr", forKey: "public.url-name")
@@ -94,7 +70,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
                     dict.setValue(amrData, forKey: "org.3gpp.adaptive-multi-rate-audio")
                     pasteboard.items = NSArray(object: dict) as [AnyObject]
                     
-                    showHUD("Copied")
+                    showHUD("Copied " + trillmoji.text)
                 }
             }
         } else {

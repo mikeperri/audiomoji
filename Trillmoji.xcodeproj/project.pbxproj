@@ -11,18 +11,18 @@
 		52220E2C1C09009A00555350 /* 37x-Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52220E2A1C09009A00555350 /* 37x-Checkmark@2x.png */; };
 		52220E3A1C0B9D3200555350 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52220E391C0B9D3200555350 /* KeyboardViewController.swift */; };
 		52220E3E1C0B9D3200555350 /* CustomKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52220E371C0B9D3200555350 /* CustomKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		524A469B1C2F001C002AA0D3 /* Trillmojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A469A1C2F001C002AA0D3 /* Trillmojis.swift */; };
 		525888491C08FBC000C89BC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525888481C08FBC000C89BC9 /* AppDelegate.swift */; };
 		5258884B1C08FBC000C89BC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258884A1C08FBC000C89BC9 /* ViewController.swift */; };
 		5258884E1C08FBC000C89BC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5258884C1C08FBC000C89BC9 /* Main.storyboard */; };
 		525888501C08FBC000C89BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5258884F1C08FBC000C89BC9 /* Assets.xcassets */; };
 		525888531C08FBC000C89BC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525888511C08FBC000C89BC9 /* LaunchScreen.storyboard */; };
-		525CB9691C12BDC500585BB6 /* KeyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CB9681C12BDC500585BB6 /* KeyData.swift */; };
 		525CB96D1C12C42700585BB6 /* huh.amr in Resources */ = {isa = PBXBuildFile; fileRef = 525CB96A1C12C42700585BB6 /* huh.amr */; };
 		526497261C128E67007D6353 /* Trillmoji.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 526497251C128E67007D6353 /* Trillmoji.entitlements */; };
 		526497271C128E67007D6353 /* Trillmoji.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 526497251C128E67007D6353 /* Trillmoji.entitlements */; };
 		52B81A471C2C9FE90064A734 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DA732EBB53335DB8131C2B /* libPods.a */; };
 		5C16C1A51C27419600C543B1 /* KeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C16C1A31C27401E00C543B1 /* KeyCell.swift */; };
-		5C16C1A61C2757A800C543B1 /* KeyboardViewControllerSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C16C1A11C273A7400C543B1 /* KeyboardViewControllerSB.storyboard */; };
+		5C16C1A61C2757A800C543B1 /* Keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C16C1A11C273A7400C543B1 /* Keyboard.storyboard */; };
 		74B44AF61C133C9C005A0E6B /* cat.amr in Resources */ = {isa = PBXBuildFile; fileRef = 74B44AF51C133C9C005A0E6B /* cat.amr */; };
 		74B44AF81C13884B005A0E6B /* rocket.amr in Resources */ = {isa = PBXBuildFile; fileRef = 74B44AF71C13884B005A0E6B /* rocket.amr */; };
 		74B44B041C1390B2005A0E6B /* airhorn.amr in Resources */ = {isa = PBXBuildFile; fileRef = 74B44AF91C1390B2005A0E6B /* airhorn.amr */; };
@@ -86,6 +86,7 @@
 		52220E371C0B9D3200555350 /* CustomKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CustomKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		52220E391C0B9D3200555350 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		52220E3B1C0B9D3200555350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		524A469A1C2F001C002AA0D3 /* Trillmojis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trillmojis.swift; sourceTree = "<group>"; };
 		525888451C08FBC000C89BC9 /* Trillmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trillmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		525888481C08FBC000C89BC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5258884A1C08FBC000C89BC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,10 +95,9 @@
 		525888521C08FBC000C89BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		525888541C08FBC000C89BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		525CB9651C12A9A700585BB6 /* CustomKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CustomKeyboard.entitlements; sourceTree = "<group>"; };
-		525CB9681C12BDC500585BB6 /* KeyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyData.swift; sourceTree = "<group>"; };
 		525CB96A1C12C42700585BB6 /* huh.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = huh.amr; sourceTree = "<group>"; };
 		526497251C128E67007D6353 /* Trillmoji.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Trillmoji.entitlements; sourceTree = "<group>"; };
-		5C16C1A11C273A7400C543B1 /* KeyboardViewControllerSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = KeyboardViewControllerSB.storyboard; path = ../Trillmoji/KeyboardViewControllerSB.storyboard; sourceTree = "<group>"; };
+		5C16C1A11C273A7400C543B1 /* Keyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Keyboard.storyboard; path = ../Trillmoji/Keyboard.storyboard; sourceTree = "<group>"; };
 		5C16C1A31C27401E00C543B1 /* KeyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyCell.swift; path = CustomKeyboard/KeyCell.swift; sourceTree = SOURCE_ROOT; };
 		74B44AF51C133C9C005A0E6B /* cat.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat.amr; sourceTree = "<group>"; };
 		74B44AF71C13884B005A0E6B /* rocket.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = rocket.amr; sourceTree = "<group>"; };
@@ -170,10 +170,10 @@
 				74B44B141C13992E005A0E6B /* CustomKeyboard-Bridging-Header.h */,
 				525CB9651C12A9A700585BB6 /* CustomKeyboard.entitlements */,
 				52220E391C0B9D3200555350 /* KeyboardViewController.swift */,
+				524A469A1C2F001C002AA0D3 /* Trillmojis.swift */,
 				5C16C1A31C27401E00C543B1 /* KeyCell.swift */,
 				52220E3B1C0B9D3200555350 /* Info.plist */,
-				525CB9681C12BDC500585BB6 /* KeyData.swift */,
-				5C16C1A11C273A7400C543B1 /* KeyboardViewControllerSB.storyboard */,
+				5C16C1A11C273A7400C543B1 /* Keyboard.storyboard */,
 			);
 			path = CustomKeyboard;
 			sourceTree = "<group>";
@@ -396,7 +396,7 @@
 				74B44AF61C133C9C005A0E6B /* cat.amr in Resources */,
 				74B44B111C13926E005A0E6B /* sad-trombone.amr in Resources */,
 				74B44B051C1390B2005A0E6B /* applause.amr in Resources */,
-				5C16C1A61C2757A800C543B1 /* KeyboardViewControllerSB.storyboard in Resources */,
+				5C16C1A61C2757A800C543B1 /* Keyboard.storyboard in Resources */,
 				74B44B081C1390B2005A0E6B /* crickets.amr in Resources */,
 				74B44B371C139CEE005A0E6B /* turkey.wav in Resources */,
 				74B44B2F1C139CEE005A0E6B /* huh.wav in Resources */,
@@ -507,9 +507,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				524A469B1C2F001C002AA0D3 /* Trillmojis.swift in Sources */,
 				5C16C1A51C27419600C543B1 /* KeyCell.swift in Sources */,
 				52220E3A1C0B9D3200555350 /* KeyboardViewController.swift in Sources */,
-				525CB9691C12BDC500585BB6 /* KeyData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +560,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CustomKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mjp.Trillmoji.CustomKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -577,6 +578,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CustomKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mjp.Trillmoji.CustomKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
