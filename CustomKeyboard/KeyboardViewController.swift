@@ -25,18 +25,6 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
         longPressGestureRecognizer.minimumPressDuration = 1.0
         collectionView.addGestureRecognizer(longPressGestureRecognizer)
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        view.addConstraint(NSLayoutConstraint(
-            item: view,
-            attribute: .Height,
-            relatedBy: .Equal,
-            toItem: nil,
-            attribute: .NotAnAttribute,
-            multiplier: 1,
-            constant: 168
-        ));
-    }
 
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 1.0
@@ -62,13 +50,23 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegateFlo
     
     func copyAudio(trillmoji: Trillmoji) {
         if let pasteboard: UIPasteboard = UIPasteboard.generalPasteboard() {
+            
             if let path = NSBundle.mainBundle().pathForResource(trillmoji.audioResourceName, ofType: "amr") {
                 if let amrData = NSData(contentsOfFile: path) {
-                    let dict = NSMutableDictionary(capacity: 3)
-                    dict.setValue("Audio Message.amr", forKey: "public.url-name")
-                    dict.setValue("Audio Message.amr", forKey: "public.utf8-plain-text")
-                    dict.setValue(amrData, forKey: "org.3gpp.adaptive-multi-rate-audio")
-                    pasteboard.items = NSArray(object: dict) as [AnyObject]
+                    
+                    let amrDict = NSMutableDictionary(capacity: 3)
+                    amrDict.setValue("Audio Message.amr", forKey: "public.url-name")
+                    amrDict.setValue("Audio Message.amr", forKey: "public.utf8-plain-text")
+                    amrDict.setValue(amrData, forKey: "org.3gpp.adaptive-multi-rate-audio")
+                    
+                    
+                    if trillmoji.sendText {
+                        let textDict = NSMutableDictionary(capacity: 1)
+                        textDict.setValue(trillmoji.text, forKey: "public.utf8-plain-text");
+                        pasteboard.items = NSArray(objects: textDict, amrDict) as [AnyObject]
+                    } else {
+                        pasteboard.items = NSArray(object: amrDict) as [AnyObject]
+                    }
                     
                     showHUD("Copied " + trillmoji.text)
                 }
